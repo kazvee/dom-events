@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>EVENT LISTENER PAGE</title>
+  </head>
+  <body>
+    <p></p>Welcome to my event listener page! 😎</p>
+    <p><textarea></textarea></p>
+  </body>
+</html>
+
+<!-- 
+
+  ALERTS
+  
+  document.addEventListener("click", (event) => {
+  console.log(event);
+  const coords = { X: event.clientX, Y: event.clientY }
+  console.log(coords)
+  alert(`YOU CLICKED! X:${event.clientX} and Y:${event.clientY}`);
+  alert(`Coords! ${JSON.stringify(coords)}`)
+});
+
+document.addEventListener("keydown", () => {
+  alert("You did a keydown! ⬇️");
+});
+
+document.addEventListener("keyup", () => {
+  alert("You did a keyup! ⬆️");
+});
+
+document.addEventListener("input", () => {
+  alert("You did an input! 🤠");
+});
+
+document.addEventListener("keypress", () => {
+  alert("You did a keypress! 🙂");
+});
+
+
+CONSOLE LOGS
+
+
+document.addEventListener("keydown", () => {
+  console.log("You did a keydown! ⬇️");
+});
+
+document.addEventListener("keyup", () => {
+  console.log("You did a keyup! ⬆️");
+});
+
+document.addEventListener("input", () => {
+  console.log("You did an input! 🤠");
+});
+
+document.addEventListener("keypress", () => {
+  console.log("You did a keypress! 🙂");
+});
+
+
+
+-->
+
+
+<!-- NOTES
+
+When your cursor is in the textarea and you press the SHIFT key, what events get triggered? Is keypress one of them? Why or why not?
+A keydown gets triggered, but NOT a keypress or an input. Nothing was inputted. 
+It is not a keypress because keypress shows WHICH character was entered, and in the case of SHIFT key, there is no character entered.
+  
+What's the difference between keydown and keypress?
+Keydown indicates which KEY is pressed.
+Keypress indicates which CHARACTER was entered.
+
+If you hold down the SHIFT key and then press the A key, what event fires? Did everything happen in the order that you expected?
+Only a keydown gets triggered and the A key doesn't get entered. 
+
+How do the keyboard event objects differ from each other? (For example, how is the event object different when pressing the A key by itself vs. pressing it with the SHIFT key pressed down?
+Pressing the letter A key by itself is a keydown, a keypress, and an input.
+Pressing the letter A key with the SHIFT key pressed down only registers the keydown for the SHIFT key, and doesn't have an event for anything to do with the letter A key.
+
+With some text already in the box, press the DELETE/BACKSPACE key to delete a character. Do you expect the events to be the same or different from the examples above?
+Delete/Backspace registers a keydown and an input
+
+What happens if you add 2 identical event listeners? Does JavaScript complain about this or does it run the callback functions in both event listeners? 
+It doesn't complain, it runs both event listeners.
+
+-->
